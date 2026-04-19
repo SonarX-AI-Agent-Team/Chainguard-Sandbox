@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify repository shape
+        run: |
+          test -f README.md
+          test -f CHANGELOG.md
+          test -f params/config.go
+          test -f core/vm/instructions.go
+          test -f core/vm/contracts.go
+          test -f internal/ethapi/api.go
+          test -f consensus/sandbox/consensus.go
+          test -f docs/upgrade-guide.md

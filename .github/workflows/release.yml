@@ -1,0 +1,16 @@
+name: release
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print release metadata
+        run: |
+          echo "Release tag: ${{ github.event.release.tag_name }}"
+          echo "Prerelease: ${{ github.event.release.prerelease }}"

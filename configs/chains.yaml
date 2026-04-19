@@ -1,0 +1,13 @@
+chains:
+  - id: sandbox
+    name: Agent Validation Sandbox
+    ecosystem: evm
+    repository: https://github.com/SonarX-AI-Agent-Team/Chainguard-Sandbox.git
+    default_branch: main
+    changelog: CHANGELOG.md
+    docs:
+      - docs/upgrade-guide.md
+    release_detection:
+      strategy: github_releases
+      include_prereleases: true
+    notes: Synthetic chain used for validating release and alert classification.

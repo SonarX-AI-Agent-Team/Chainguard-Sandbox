@@ -2,6 +2,13 @@
 
 All notable changes to this synthetic repository will be documented in this file.
 
+## [4.0.1] - 2026-04-23
+
+### Changed
+
+- Clarified the release-validation flow in the repository documentation.
+- Published a maintenance sandbox release for downstream alerting validation.
+
 ## [1.2.1] - 2026-04-18
 
 ### Fixed
